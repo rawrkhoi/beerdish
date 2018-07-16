@@ -1,15 +1,16 @@
-var mysql = require('mysql');
+/* eslint key-spacing: 0 */
+const mysql = require('mysql');
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'FILL_ME_IN',
-  database : 'test'
+  database : 'test',
 });
 
-var selectAll = function(callback) {
-  connection.query('SELECT * FROM items', function(err, results, fields) {
-    if(err) {
+const selectAll = (callback) => {
+  connection.query('SELECT * FROM items', (err, results, fields) => {
+    if (err) {
       callback(err, null);
     } else {
       callback(null, results);
