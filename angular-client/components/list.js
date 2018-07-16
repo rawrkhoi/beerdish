@@ -1,8 +1,10 @@
 angular.module('app')
-.component('list', {
-  bindings: {
-    items: '<',
-  },
-  controller: function() {},
-  templateUrl: '/templates/list.html'
-});
+  .component('list', {
+    bindings: {
+      items: '<',
+    },
+    controller() {
+
+    },
+    templateUrl: '/templates/list.html',
+  });
