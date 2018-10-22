@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS beerdish;
 
-CREATE DATABASE test;
+CREATE DATABASE beerdish;
 
-USE test;
+USE beerdish;
 
 CREATE TABLE items (
   id int NOT NULL AUTO_INCREMENT,
