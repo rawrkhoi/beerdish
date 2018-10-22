@@ -1,7 +1,10 @@
 angular.module('app')
   .controller('AppCtrl', (itemsService) => {
-    itemsService.getAll((data) => {
-      this.items = data;
+    itemsService.getAll((ingredients) => {
+      this.search = ingredients;
+      this.results = (data) => {
+        this.recipes = data;
+      };
     });
   })
   .component('app', {
