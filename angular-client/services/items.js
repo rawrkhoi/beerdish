@@ -3,23 +3,7 @@ angular.module('app')
     // this.db to talk to database
     this.getAll = (query, callback) => {
       // blocked by CORS: No 'Access-Control-Allow-Origin' header on the requested resource.
-      // $http.get('https://api.edamam.com/search', {
-      //   parameters: {
-      //     app_id: window.EDAMAM_API_ID,
-      //     app_key: window.EDAMAM_API_KEY,
-      //     q: query,
-      //     headers: {
-      //       'Access-Control-Allow-Origin': '*',
-      //     },
-      //   },
-      // })
-      $http.get('https://api.punkapi.com/v2/beers', {
-        params: {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },
-        },
-      })
+      $http.get(`https://api.edamam.com/search?app_id=b9d531b7&app_key=4ce2f6ffaefc283787ab3b2c58b95f90&q=${query}`, {})
         .then(({ data }) => {
           console.log(data);
           if (callback) { callback(data); }

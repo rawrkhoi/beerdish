@@ -1,34 +1,120 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Brewski for Foodski</title>
-    <h2 class='title'>Brews for Your Food</h2>
-    <h3 class='subtitle'>If you drink enough, anything tastes good</h3>
-  </head>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <title>Brewski for Foodski</title>
+      <h2 class='title'>Brews for Your Food</h2>
+      <blockquote class="blockquote">
+        <p class="mb-0">
+          If you drink enough, anything tastes good
+        </p>
+        <footer class="blockquote-footer">
+          -Dilly Dilly <cite>a drunk</cite>
+        </footer>
+      </blockquote>
+      <form role="form">
+        <div class="form-group">
 
-  <body ng-app="app">
-    <div class = "search" ng-controller="AppCtrl">
-      <form name="ingredient" ng-submit="submit()">
-        <div class="search">
-          <!-- <search service="$ctrl.searchService" result="$ctrl.searchResults" /> -->
+          <label for="food">
+            Food
+          </label>
+          <input type="text" class="form-control" id="exampleInputEmail1" />
         </div>
-        <table>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+        <h1>Under Maintenance, Have a Bud Light with your meal</h1>
+      </form><img alt="Image" src="https://i.ytimg.com/vi/9mGNhvkVT8Q/maxresdefault.jpg" width="500" class="rounded" />
+      <table class="table table-hover table-sm table-striped">
+        <thead>
           <tr>
-            <td>Ingredient</td><input type="text" name="text" required/>
+            <th>
+              #
+            </th>
+            <th>
+              Beer
+            </th>
+            <th>
+              Courses
+            </th>
+            <th>
+              Popular
+            </th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
-            <td><input type="submit" value="Submit" /></td>
+            <td>
+              1
+            </td>
+            <td>
+              Jerry Beer
+            </td>
+            <td>
+              Jerry Course
+            </td>
+            <td>
+              Not Popular
+            </td>
           </tr>
-        </table>
-      </form>
-      <!-- <form ng-submit="submit()" ng-controller="list">
-          Ingredient:
-      </form> -->
-      <!-- <div ng-controller="AppCtrl">
-        <list items="$ctrl.items"/>
-      </div> -->
+          <tr class="table-active">
+            <td>
+              1
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              01/04/2012
+            </td>
+            <td>
+              Approved
+            </td>
+          </tr>
+          <tr class="table-success">
+            <td>
+              2
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              02/04/2012
+            </td>
+            <td>
+              Declined
+            </td>
+          </tr>
+          <tr class="table-warning">
+            <td>
+              3
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              03/04/2012
+            </td>
+            <td>
+              Pending
+            </td>
+          </tr>
+          <tr class="table-danger">
+            <td>
+              4
+            </td>
+            <td>
+              TB - Monthly
+            </td>
+            <td>
+              04/04/2012
+            </td>
+            <td>
+              Call in to confirm
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <h1>Under Maintenance, Have a Bud Light with your meal</h1>
-    <img src="https://i.ytimg.com/vi/9mGNhvkVT8Q/maxresdefault.jpg" width="500"/>
-  </body>
-</html>
+  </div>
+</div>

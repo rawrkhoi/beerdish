@@ -1,2 +1,2 @@
-window.EDAMAM_API_KEY = '0d242f4c77b2496350e1c197bd2c21d4';
+window.EDAMAM_API_KEY = '4ce2f6ffaefc283787ab3b2c58b95f90';
 window.EDAMAM_API_ID = 'b9d531b7';
