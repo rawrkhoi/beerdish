@@ -1,11 +1,29 @@
-<div ng-app="app" ng-controller="AppCtrl">
-  <h1>Beer Dish</h1>
-    <form ng-submit="submit()" ng-controller="list">
-      Enter ingredient and hit enter:
-      <input type="text" ng-model="text" name="text" />
-      <input type="submit" id="submit" value="Submit" />
-    </form>
-  <div>
-    <list items="$ctrl.items"/>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brewski for Foodski</title>
+    <h1 class='title'>Brews for Your Food</h1>
+    <h3 class='subtitle'>If you drink enough, anything tastes good</h3>
+    <script src="angular/angular.js"></script>
+    <script type="text/javascript" src="components/app.js"></script>
+  </head>
+
+  <body ng-app="app">
+    <div class = "search" ng-controller="AppCtrl">
+      <form class="searchForm">
+        <div class="search">
+          <search service="$ctrl.searchService" result="$ctrl.searchResults" />
+        </div>
+      </form>
+        <!-- <form ng-submit="submit()" ng-controller="list">
+          Ingredient:
+          <input type="text" ng-model="text" name="text" />
+          <input type="submit" id="submit" value="Submit" />
+        </form> -->
+        <div ng-controller="AppCtrl">
+        <list items="$ctrl.items"/>
+      <h4> List Component </h4>
+      <list-item ng-repeat="recipe in $ctrl.recipes" recipe=recipe />
+    </div>
+  </body>
+</html>
