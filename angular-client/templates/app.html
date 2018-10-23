@@ -2,28 +2,33 @@
 <html>
   <head>
     <title>Brewski for Foodski</title>
-    <h1 class='title'>Brews for Your Food</h1>
+    <h2 class='title'>Brews for Your Food</h2>
     <h3 class='subtitle'>If you drink enough, anything tastes good</h3>
-    <script src="angular/angular.js"></script>
-    <script type="text/javascript" src="components/app.js"></script>
   </head>
 
   <body ng-app="app">
     <div class = "search" ng-controller="AppCtrl">
-      <form class="searchForm">
+      <form name="ingredient" ng-submit="submit()">
         <div class="search">
-          <search service="$ctrl.searchService" result="$ctrl.searchResults" />
+          <!-- <search service="$ctrl.searchService" result="$ctrl.searchResults" /> -->
         </div>
+        <table>
+          <tr>
+            <td>Ingredient</td><input type="text" name="text" required/>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Submit" /></td>
+          </tr>
+        </table>
       </form>
-        <!-- <form ng-submit="submit()" ng-controller="list">
+      <!-- <form ng-submit="submit()" ng-controller="list">
           Ingredient:
-          <input type="text" ng-model="text" name="text" />
-          <input type="submit" id="submit" value="Submit" />
-        </form> -->
-        <div ng-controller="AppCtrl">
+      </form> -->
+      <!-- <div ng-controller="AppCtrl">
         <list items="$ctrl.items"/>
-      <h4> List Component </h4>
-      <list-item ng-repeat="recipe in $ctrl.recipes" recipe=recipe />
+      </div> -->
     </div>
+    <h1>Under Maintenance, Have a Bud Light with your meal</h1>
+    <img src="https://i.ytimg.com/vi/9mGNhvkVT8Q/maxresdefault.jpg" width="500"/>
   </body>
 </html>

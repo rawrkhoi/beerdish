@@ -2,6 +2,7 @@ angular.module('app')
   .service('itemsService', function itemsService($http) {
     // this.db to talk to database
     this.getAll = (query, callback) => {
+      // blocked by CORS: No 'Access-Control-Allow-Origin' header on the requested resource.
       // $http.get('https://api.edamam.com/search', {
       //   parameters: {
       //     app_id: window.EDAMAM_API_ID,
@@ -20,13 +21,9 @@ angular.module('app')
         },
       })
         .then(({ data }) => {
-          if (callback) {
-            console.log(data);
-            callback(data);
-          }
+          console.log(data);
+          if (callback) { callback(data); }
         })
-        .catch((err) => {
-          console.log(err);
-        });
+        .catch((err) => { console.log(err); });
     };
   });

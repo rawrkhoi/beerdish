@@ -17,9 +17,10 @@ DROP TABLE IF EXISTS `beer`;
 CREATE TABLE `beer`(
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NULL ,
   `image` VARCHAR(255) NULL ,
-  `food` VARCHAR(255) NOT NULL,
+  `course_1` VARCHAR(255) NOT NULL,
+  `course_2` VARCHAR(255) NOT NULL,
+  `course_3` VARCHAR(255) NOT NULL,
   `hits` INTEGER NULL,
   PRIMARY KEY(`id`)
 );
