@@ -1,5 +1,10 @@
 <div ng-app="app" ng-controller="AppCtrl">
   <h1>Beer Dish</h1>
+    <form ng-submit="submit()" ng-controller="list">
+      Enter ingredient and hit enter:
+      <input type="text" ng-model="text" name="text" />
+      <input type="submit" id="submit" value="Submit" />
+    </form>
   <div>
     <list items="$ctrl.items"/>
   </div>
