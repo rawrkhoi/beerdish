@@ -1,11 +1,18 @@
 angular.module('app')
-  .controller('AppCtrl', (itemsService) => {
+  .controller('AppCtrl', function AppCtrl(itemsService) {
     this.searchService = itemsService;
-    this.searchResults = (data) => {
-      this.beer = data;
+    this.searchRecipe = (data) => {
+      this.recipe = data;
+      console.log(data, 'got recipe');
     };
 
-    itemsService.getAll('steak', this.searchResults);
+    this.searchBeer = (data) => {
+      this.beer = data;
+      console.log(data, 'got beer');
+    };
+
+    itemsService.getBeer(this.searchBeer);
+    itemsService.getRecipe('steak', this.searchRecipe);
   })
 
   .component('app', {
