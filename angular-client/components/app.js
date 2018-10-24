@@ -2,8 +2,8 @@ angular.module('app')
   .controller('AppCtrl', function AppCtrl(itemsService) {
     this.searchService = itemsService;
     this.searchRecipe = (data) => {
-      this.recipes = data;
-      console.log(data, 'got recipe');
+      this.recipes = data.hits;
+      console.log(data.hits, 'got recipe');
     };
 
     this.searchBeer = (data) => {
@@ -12,7 +12,10 @@ angular.module('app')
     };
 
     itemsService.getBeer(this.searchBeer);
-    // itemsService.getRecipe('steak', this.searchRecipe);
+
+    this.getRecipe = (query) => {
+      itemsService.getRecipe(query, this.searchRecipe);
+    };
   })
 
   .component('app', {
