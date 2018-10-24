@@ -44,7 +44,7 @@
             <th>%ABV</th>
             <th>Beer Names</th>
             <th>Recommended</th>
-            <th>Popular</th>
+            <!-- <th>Popular</th> -->
           </tr>
         </thead>
         <tbody>
@@ -52,12 +52,12 @@
             <td><img ng-src="{{ beer.image }}" style="height:50px;"/></td>
             <td>%{{ beer.abv }}</td>
             <td>{{ beer.name }}</td>
-            <td>
+            <td class="btn btn-primary" ng-click="$ctrl.getRecipe(beer.course_1)">
               {{ beer.course_1 }},
-              {{ beer.course_2 }},
-              {{ beer.course_3 }},
+              <!-- {{ beer.course_2 }},
+              {{ beer.course_3 }}, -->
             </td>
-            <td>{{ beer.hits }}</td>
+            <!-- <td>{{ beer.hits }}</td> -->
           </tr>
         </tbody>
       </table>
