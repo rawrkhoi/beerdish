@@ -16,6 +16,10 @@ angular.module('app')
     this.getRecipe = (query) => {
       itemsService.getRecipe(query, this.searchRecipe);
     };
+
+    // this.onClick = () => {
+
+    // };
   })
 
   .component('app', {

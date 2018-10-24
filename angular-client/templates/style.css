@@ -1,0 +1,18 @@
+body {
+  background-image: url("https://wallpapercave.com/wp/wp3087148.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 5px solid whitesmoke;
+  text-align: center;
+  background-color: aliceblue;
+  opacity: 0.9;
+  font-family: serif;
+}

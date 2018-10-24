@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
@@ -23,19 +23,12 @@
           </button>
         </div>
       </form>
-      <table>
-        <thead>
-          <tr>
-            <th>Dish</th>
-            <th>From</th>
-            <th>Link to Recipe</th>
-          </tr>
-        </thead>
+      <table class="recipe-table">
         <tbody>
           <tr ng-repeat="recipe in $ctrl.recipes">
             <td><img ng-src="{{ recipe.recipe.image }}" style="height:50px;" /></td>
-            <td>{{ recipe.recipe.source }}</td>
-            <td><a ng-href="{{recipe.recipe.url}}"><i>Click Here</i></a></td>
+            <td>Recipe from {{ recipe.recipe.source }}</td>
+            <td><a ng-href="{{recipe.recipe.url}}"><i>Recipe Link</i></a></td>
           </tr>
         </tbody>
       </table>
@@ -44,7 +37,7 @@
       </div>
       <!-- <h1>Under Maintenance, Have a Bud Light with your meal</h1>
       <img alt="Image" src="https://i.ytimg.com/vi/9mGNhvkVT8Q/maxresdefault.jpg" width="500" class="rounded" /> -->
-      <table class="table table-hover table-sm table-striped">
+      <table class="beer-table">
         <thead>
           <tr>
             <th>Beer</th>
