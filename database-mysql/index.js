@@ -8,8 +8,8 @@ const connection = mysql.createConnection({
   database : 'beerdish',
 });
 
-const selectAll = (callback) => {
-  connection.query('SELECT * FROM items', (err, results, fields) => {
+const getCourses = (callback) => {
+  connection.query('SELECT * FROM beer', (err, results, fields) => {
     if (err) {
       callback(err, null);
     } else {
@@ -20,7 +20,7 @@ const selectAll = (callback) => {
 
 // params an array of values
 const save = (param, callback) => {
-  const str = 'insert into beer (name, image, course_1, course_2, course_3, hits) values (?, ?, ?, ?, ?, ?)';
+  const str = 'insert into beer (name, image, course_1, course_2, course_3, hits) values (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY update image=image';
   connection.query(str, param, (err, result) => {
     if (err) {
       throw err;
@@ -30,5 +30,5 @@ const save = (param, callback) => {
   });
 };
 
-module.exports.selectAll = selectAll;
+module.exports.getCourses = getCourses;
 module.exports.save = save;

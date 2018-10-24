@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/../angular-client')));
 app.use(express.static(path.join(__dirname, '/../node_modules')));
 
 app.get('/beer', (req, res) => {
-  db.selectAll((err, data) => {
+  db.getCourses((err, data) => {
     if (err) {
       res.sendStatus(500);
     } else {
