@@ -1,7 +1,8 @@
 angular.module('app')
   .component('list', {
     bindings: {
-      items: '<',
+      recipes: '<',
+      beers: '<',
     },
     controller() {
 

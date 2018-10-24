@@ -25,6 +25,7 @@ axios.get('https://api.punkapi.com/v2/beers')
     res.data.map((keys) => {
       const array = [
         keys.name,
+        keys.abv,
         keys.image_url,
         keys.food_pairing[0],
         keys.food_pairing[1],

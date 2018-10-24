@@ -20,7 +20,7 @@ const getCourses = (callback) => {
 
 // params an array of values
 const save = (param, callback) => {
-  const str = 'insert into beer (name, image, course_1, course_2, course_3, hits) values (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY update image=image';
+  const str = 'insert into beer (name, abv, image, course_1, course_2, course_3, hits) values (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY update image=image';
   connection.query(str, param, (err, result) => {
     if (err) {
       throw err;
